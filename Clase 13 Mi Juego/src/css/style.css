@@ -1,0 +1,126 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: radial-gradient(circle at center, #ffeefc, #ffd9ec);
+    color: #ff5fa2;
+    text-align: center;
+    overflow: hidden;
+}
+
+
+#MenuScreen, #WinnerScreen, #LoserScreen {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+    color: #fff;
+    pointer-events: auto; 
+    z-index: 5; 
+}
+
+
+#MenuScreen {
+    background: linear-gradient(145deg, #ffb6c1, #ffcce6);
+}
+
+#WinnerScreen {
+    background: linear-gradient(145deg, #ffd6f5, #fff0f6);
+}
+
+#LoserScreen {
+    background: linear-gradient(145deg, #ff9ebb, #ffbfd2);
+}
+
+
+span {
+    font-family: "Sacramento", cursive;
+    font-size: 3.5em; /* antes 7em */
+    letter-spacing: 3px;
+    color: #ff85c1;
+    text-shadow: 0 0 10px #ffcce6, 0 0 25px #ffb6c1;
+    margin-bottom: 0.6em;
+}
+
+
+button {
+    background: linear-gradient(135deg, #ffa6c9, #ff77a9);
+    border: none;
+    border-radius: 15px;
+    color: #fff;
+    cursor: pointer;
+    font-family: "Poppins", sans-serif;
+    font-size: 1.3em;
+    padding: 0.5em 1.2em;
+    margin: 0.5em;
+    box-shadow: 0 0 15px rgba(255, 150, 200, 0.6);
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #ff66b3, #ff99cc);
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 100, 180, 0.9);
+}
+
+
+.box {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5em auto;
+    padding: 0.8em 2em;
+    width: 15em;
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: inset 0 0 15px rgba(255, 200, 230, 0.3);
+    color: #ff5fa2;
+    font-size: 0.9em;
+}
+
+.lives-box { background: rgba(255, 150, 200, 0.25); }
+.points-box { background: rgba(255, 180, 220, 0.25); }
+.score-box { background: rgba(255, 210, 240, 0.25); }
+.player-box { background: rgba(255, 160, 210, 0.25); }
+
+h3 {
+    color: #ff85c1;
+    font-weight: 600;
+    font-size: 1.1em;
+}
+
+
+#gameScreen {
+    position: relative;
+    height: 100vh;
+    background: radial-gradient(circle at center, #fff0f7, #ffd6e8);
+    overflow: hidden;
+}
+
+
+#MenuScreen span,
+#WinnerScreen span,
+#LoserScreen span {
+  font-size: 4em !important;
+  line-height: 1.2em;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+
+#MenuScreen,
+#WinnerScreen,
+#LoserScreen {
+    opacity: 1 !important;
+    visibility: visible !important;
+    pointer-events: auto !important;
+}

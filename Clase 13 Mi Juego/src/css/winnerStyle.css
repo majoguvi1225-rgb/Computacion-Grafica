@@ -1,0 +1,95 @@
+body {
+  overflow: hidden;
+  margin: 0;
+  background: radial-gradient(circle at center, #ffe3f3, #ffcce6);
+  font-family: 'Poppins', cursive;
+  color: #ff66b3;
+}
+
+
+#WinnerScreen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+#WinnerScreen span {
+  font-size: 5rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #ff77a9, #ffb6c1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  0% { text-shadow: 0 0 10px #ffb6c1, 0 0 20px #ff77a9; transform: scale(1); }
+  100% { text-shadow: 0 0 30px #ff9ecb, 0 0 60px #ffb6c1; transform: scale(1.05); }
+}
+
+
+#WinnerScreen .game button {
+  margin-top: 1.5em;
+  background: linear-gradient(135deg, #ffb6c1, #ff85c1);
+  border: none;
+  border-radius: 12px;
+  padding: 0.6em 1.4em;
+  font-size: 1.8rem;
+  color: #fff;
+  cursor: pointer;
+  box-shadow: 0 0 20px rgba(255, 150, 200, 0.4);
+  transition: all 0.3s ease;
+}
+
+#WinnerScreen .game button:hover {
+  transform: translateY(-3px) scale(1.05);
+  background: linear-gradient(135deg, #ff66b3, #ff99cc);
+  box-shadow: 0 0 30px rgba(255, 150, 200, 0.9);
+}
+
+#WinnerScreen .game button:active {
+  transform: scale(0.98);
+}
+
+.pyro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.pyro > .before, .pyro > .after {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  animation: bang 1s ease-out infinite, gravity 1s ease-in infinite, position 5s linear infinite;
+}
+
+.pyro > .after {
+  animation-delay: 1.25s;
+}
+
+@keyframes bang {
+  to {
+    box-shadow:
+      100px -300px #ffb6c1, 150px -100px #ff99cc, 200px -200px #ff66b3,
+      -120px -180px #ffcce6, -60px -250px #ff85c1, 120px -250px #ffa6c9;
+  }
+}
+
+@keyframes gravity {
+  to {
+    transform: translateY(200px);
+    opacity: 0;
+  }
+}
