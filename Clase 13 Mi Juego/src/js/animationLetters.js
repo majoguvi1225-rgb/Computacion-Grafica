@@ -1,3 +1,4 @@
+//hola
 $(function () {
     var $jittery = $('.jittery'),
         aText = $jittery.text().split(''),
